@@ -2,39 +2,63 @@
 
 header {
     height: 100vh;
-    background: linear-gradient(rgba(darken($firstColour, 10%), 0.3), rgba(darken($fourthColour, 40%), 0.7))
+    background: linear-gradient(rgba(darken($firstColour, 5%), 0.5), rgba(darken($fourthColour, 45%), 0.9))
     , url(../../public/images/hero3.jpeg) center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 78%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 78%, 0 100%);
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 62% 78%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 62% 78%, 0 100%);
     // background: linear-gradient($firstColour, $fourthColour)
-   
-}
 
 .titles {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid white;
     position: absolute;
-    top: 50%;
-}
-.typewriter h1 {
-    color:white;
-    font-size:7rem;
-    font-weight:400;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-    typing 4.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-.titles h2 {
     color: white;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
+.typewriter {
+    display: flex;
+    flex-direction: column;
+    text-shadow: 1px 1px 3px black;
+    h1 {
+    color:white;
+    font-size:6.8rem;
+    }
+    p {
+        font-size: 2.8rem;
+    }
+    a {
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            color: $firstColour;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    padding:10px 120px 0 0;
+    li {
+        @extend p;
+        font-size:2.6rem;
+        line-height: 2;
+        font-weight: 400;
+        text-align: left;
+        text-shadow: 1px 1px 1px black;
+    }
+}
+
 h2 {
-    padding: 30px 0 20px 0;
+    // padding: 30px 0 20px 0;
 }
 
 /* The typing effect */
@@ -48,27 +72,5 @@ h2 {
   from, to { border-color: transparent }
   50% { border-color: white; }
 }
- .headshot {
-        position: absolute;
-        top: 50%;
-        left: 70%;
-        transform: translate(-50%, -50%);
-        margin: 0 auto;
-        width: 20%;
-        transition: 2s ease;
-        &:hover > .imageBW {
-            display: none;
-        }
-    }
-    .imageBW {
-        border-radius: 50%;
-        border: 15px solid linear-gradient($firstColour, $fourthColour);
-        position: absolute;
-        width: 100%;
-    }
-    .imageColour {
-        border-radius: 50%;
-        border: 15px solid linear-gradient($firstColour, $fourthColour);
-        position:absolute;
-        width: 100%;
-    }
+
+}
