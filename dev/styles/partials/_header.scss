@@ -1,0 +1,74 @@
+// HEADER STYLES:
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(darken($firstColour, 10%), 0.3), rgba(darken($fourthColour, 40%), 0.7))
+    , url(../../public/images/hero3.jpeg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 78%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 78%, 0 100%);
+    // background: linear-gradient($firstColour, $fourthColour)
+   
+}
+
+.titles {
+    position: absolute;
+    top: 50%;
+}
+.typewriter h1 {
+    color:white;
+    font-size:7rem;
+    font-weight:400;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 4.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+.titles h2 {
+    color: white;
+}
+h2 {
+    padding: 30px 0 20px 0;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+ .headshot {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        width: 20%;
+        transition: 2s ease;
+        &:hover > .imageBW {
+            display: none;
+        }
+    }
+    .imageBW {
+        border-radius: 50%;
+        border: 15px solid linear-gradient($firstColour, $fourthColour);
+        position: absolute;
+        width: 100%;
+    }
+    .imageColour {
+        border-radius: 50%;
+        border: 15px solid linear-gradient($firstColour, $fourthColour);
+        position:absolute;
+        width: 100%;
+    }

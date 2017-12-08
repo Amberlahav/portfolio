@@ -1,3 +1,97 @@
+// variables:
+
+$firstColour: #6bfaee;
+$secondColour: #a3a7fc;
+$thirdColour: #2e2e7f;
+$fourthColour: #9b4be6;
+
+
+$primaryFont: 'Poiret One', cursive;
+$secondaryFont: 'Poppins', sans-serif;
+
+
+html {
+    font-size: 62.5%;
+}
+
 body {
-    background: blueviolet;
+    margin: 0;
+}
+
+.wrapper {
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+h1 {
+    // font-family: 'Cinzel Decorative', cursive;
+    font-family: $primaryFont;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: $secondaryFont;
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 400;
+    color: $thirdColour;
+}
+   h2::after {
+    content:'';
+    height: 30px;
+    width:60px;
+    display:block;
+    border-bottom: 1px solid black;
+    margin: auto;
+    }
+
+h3 {
+    @extend p;
+    font-weight: 400;
+
+}
+ p{
+    font-family: $secondaryFont;
+    font-weight: lighter;
+    font-size: 1.8rem;
+    line-height: 1.75;
+    text-align: center;
+ }
+.aboutIcons {
+    margin: 0 auto;
+    margin-top:20px;
+    width: 35%;
+    display: flex;
+}
+.iconHolder {
+    margin: 50px 20px;
+    padding: 20px;
+    background-color: rgba($secondColour, 0.19);
+    border-radius: 50%;
+    display:flex;
+}
+.fa {
+    font-size: 4rem;
+    margin: auto;
+    color: $fourthColour;
+}
+
+.dashed{
+  stroke-dasharray: 25;
+
+}
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2.5s linear  alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
