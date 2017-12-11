@@ -1,0 +1,27 @@
+.mySkills {
+    height: 50vh;
+    background: linear-gradient(90deg, rgba(darken(#6bb4fa, 30%), 0.7), rgba(#a3a7fc, 0.8))/*, url(../../public/images/hero4.jpg)*/;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position-y: 5%;
+    h2 {
+        color: white;
+        padding-top: 50px;
+    }
+
+    .skills {
+        // width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+     .devicon {
+            font-size:6rem;
+            margin: 0 5px;
+            padding: 10px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+}

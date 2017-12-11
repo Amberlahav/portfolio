@@ -1,11 +1,17 @@
+// GLOBAL STYLES:
+
 // variables:
 
+// colours:
 $firstColour: #6bfaee;
 $secondColour: #a3a7fc;
 $thirdColour: #2e2e7f;
 $fourthColour: #9b4be6;
+$fifthColour: #f3f9ff;
+$sixthColour: #8991f7;
+$seventhColour: #8283a4;
 
-
+// fonts:
 $primaryFont: 'Poiret One', cursive;
 $secondaryFont: 'Poppins', sans-serif;
 
@@ -18,63 +24,75 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: -1px;
 }
 
 .wrapper {
     width: 75%;
     margin: 0 auto;
-    // border: 1px solid white;
-    
+    // border: 1px solid blueviolet;
 }
 
+img {
+    width: 100%;
+    }
 
 h1 {
     // font-family: 'Cinzel Decorative', cursive;
     font-family: $primaryFont;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 h2 {
     font-family: $secondaryFont;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     text-align: center;
-    font-weight: 400;
+    font-weight: 300;
     color: $thirdColour;
 }
-   h2::after {
+h2::after {
     content:'';
-    height: 30px;
-    width:60px;
+    height: 20px;
+    width:40px;
     display:block;
-    border-bottom: 1px solid black;
-    margin: auto;
+    border-bottom: 1px solid $sixthColour;
+    margin: 0 auto;
     }
 
-h3 {
-    @extend p;
-    font-weight: 400;
 
+h3 {
+    @extend h2;
+    font-size: 2rem;
+    font-weight: 400;
 }
  p{
     font-family: $secondaryFont;
     font-weight: lighter;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.75;
     text-align: center;
+    color:$seventhColour;
  }
  a {
      @extend p;
  }
 
+svg {
+    transform: rotate(180deg);
+    height: 50vh;
+    margin-left: 30%;
+    border: 1px solid orange;
+}
+
 .dashed{
   stroke-dasharray: 25;
+
 
 }
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 2s linear alternate infinite;
+  animation: dash 2s linear forwards;
 }
 
 h1.typing {
@@ -87,26 +105,7 @@ h1.typing {
     typing 4.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
-h2::after {
-    content:'';
-    height: 30px;
-    width:60px;
-    display:block;
-    border-bottom: 1px solid black;
-    margin: auto;
-    }
 
-// h3 .typing {
-//     overflow: hidden; /* Ensures the content is not revealed until the animation */
-//     border-right: .12em solid white; /* The typwriter cursor */
-//     white-space: nowrap; /* Keeps the content on a single line */
-//     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-//     letter-spacing: .1em;
-//     border-color: $fourthColour;
-//     animation: 
-//     typing 3.5s steps(40, end),
-//     blink-caret .35s step-end infinite;
-// }
 
 @keyframes dash {
   from {
@@ -116,30 +115,119 @@ h2::after {
     stroke-dashoffset: 0;
   }
 }
-.mySkills {
-    height: 80vh;
-    background: linear-gradient(90deg, rgba(darken($firstColour, 60%), 0.7), rgba($fourthColour, 0.5)), url(../../public/images/hero4.jpg);
-    background-repeat: no-repeat;
-    // background-size: cover;
-    background-position-y: 5%;
-    h2 {
-        color: white;
-        padding-top: 50px;
-    }
+
+
+button {
+  @extend p;
+  background: linear-gradient(-90deg, #6bb4fa 0%, #a3a7fc 100%);
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  border-radius:5px;
+  // Using inset box-shadow instead of border for sizing simplicity
+  box-shadow: 0px 5px 20px 0px rgba(68, 84, 255, 0.3);;
+  color: white;
+  font-size: inherit;
+  font-weight: 700;
+  z-index:50;
+  // Required, since we're setting absolute on pseudo-elements
+  position: relative;
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
-.skills {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    
-    img {
-        width: 15%;
-        margin: 10px;
-        padding: 20px;
-        color: white;
-        box-shadow: 0px 0px 20px black;
-    }
+
+.buttonLive {
+  margin-right: 10px;
 }
+
+.draw {
+    transition: color 0.3s;
+
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  &:hover {
+    color: $secondColour;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: $secondColour; // Make borders visible
+    border-right-color: $secondColour;
+    transition:
+      width 0.2s ease-out, // Width expands first
+      height 0.2s ease-out 0.2s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: $secondColour; // Make borders visible
+    border-left-color: $secondColour;
+    transition:
+      border-color 0s ease-out 0.4s, // Wait for ::before to finish before showing border
+      width 0.2s ease-out 0.4s, // And then exanding width
+      height 0.2s ease-out 0.7s; // And finally height
+  }
+}
+.meet {
+  
+  &:hover {
+    color: $secondColour;
+    // background: linear-gradient(-90deg, lighten(#6bb4fa, 5%), lighten(#a3a7fc, 5%));
+    background: $fifthColour;
+  }
+
+  // Start ::after in same position as ::before
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  // Change colors
+  &:hover::before {
+    border-top-color: $secondColour;
+    border-right-color: $secondColour;
+  }
+
+  &:hover::after {
+    border-bottom-color: $secondColour;
+    border-left-color: $secondColour;
+    transition: // Animate height first, then width
+      height 0.2s ease-out,
+      width 0.2s ease-out 0.2s;
+  }
+
+}
+

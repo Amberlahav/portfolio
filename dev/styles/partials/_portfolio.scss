@@ -1,0 +1,70 @@
+// PORTFOLIO STYLES:
+
+.portfolio {
+    .wrapper {
+        width: 85%;
+    }
+    .project {
+        //  border: 1px solid green;
+        height: 70vh;
+        // border: 1px solid blueviolet;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: 100px;
+
+    }
+    
+    .projectDescription {
+        z-index:5;
+        background-color: $fifthColour;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        height: 50vh;
+        h3, p {
+        text-align: left;
+        }
+        h3::after {
+            margin: 0;
+        }
+    }
+    .dottedLine {
+        position: relative;
+        bottom: 150px;
+        border: 1px solid red;
+        display: none;
+    }
+    .projectDescription1, .projectDescription3 {
+        padding: 30px 100px 50px 50px;
+        left: 0%;
+        text-align:right;
+    }
+
+    .projectDescription2, .projectDescription4 {
+        padding: 30px 50px 50px 100px;
+        right:0%;
+    }
+    .imageContainer {
+        width: 60%;
+        // border: 1px solid blue;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .imageContainer1, .imageContainer3 {
+        right: 0%;
+    }
+    .imageContainer2, .imageContainer4 {
+        left:0%;
+    }
+    img {
+        max-width:100%;
+        // position: absolute;
+        
+    }
+    
+}

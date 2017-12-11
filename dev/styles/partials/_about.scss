@@ -2,8 +2,12 @@
 
 .about {
     height: 90vh;
+    .wrapper {
+        padding: 0px 100px;
+    }
     // border: 1px solid blueviolet;
-     .headshot {
+    // move to header:
+    .headshot {
         position: absolute;
         top: 50%;
         left: 62%;
@@ -20,49 +24,49 @@
         border: 15px solid linear-gradient($firstColour, $fourthColour);
         position: absolute;
         width: 100%;
-        box-shadow: 0px 0px 2px black;
+        // box-shadow: 0px 0px 2px black;
     }
     .imageColour {
         border-radius: 50%;
         border: 15px solid linear-gradient($firstColour, $fourthColour);
         position:absolute;
         width: 100%;
-        box-shadow: 0px 0px 2px black;
+        // box-shadow: 0px 0px 2px black;
+    }
+// move to header^
+
+    h3 {
+        @extend p;
+        font-weight: 400;
+        color: $sixthColour;
     }
 
+    p{
+        font-family: $secondaryFont;
+        font-weight: lighter;
+        line-height: 1.75;
+        text-align: center;
+        
+    }
+    // 
+    .aboutIcons {
+        margin: 0 auto;
+        margin-top:20px;
+        width: 50%;
+        display: flex;
+    }
+    .iconHolder {
 
-h3 {
-    @extend p;
-    font-weight: 400;
-
-}
-
- p{
-    font-family: $secondaryFont;
-    font-weight: lighter;
-    font-size: 1.8rem;
-    line-height: 1.75;
-    text-align: center;
-    
- }
-// 
-.aboutIcons {
-    margin: 0 auto;
-    margin-top:20px;
-    width: 35%;
-    display: flex;
-}
-.iconHolder {
-    margin: 10px 20px;
-    padding: 20px;
-    background-color: rgba($secondColour, 0.19);
-    border-radius: 50%;
-    display:flex;
-}
-.fa {
-    font-size: 4rem;
-    margin: auto;
-    color: $fourthColour;
-}
+        margin: 20px;
+        padding: 20px;
+        background-color: $fifthColour;
+        border-radius: 50%;
+        // box-shadow: 0px 0px 6px lightgrey;
+    }
+    img {
+        width: 100%;
+        margin: auto;
+        // color: $fourthColour;
+    }
 
 }

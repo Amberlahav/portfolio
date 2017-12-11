@@ -1,0 +1,47 @@
+// CONTACT STYLES
+
+.contact {
+    height: 80vh;
+    background: url(../../public/images/map.png);
+    background-size: cover;
+    form {
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+
+      
+        .contactInfoInputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: calc(50% - 20px);
+            margin-right: 20px;
+            
+        }
+        input, textarea {
+            @extend p;
+            text-align: left;
+            padding: 10px;
+        }
+        textarea {
+            width: 50%;
+        }
+        
+        label {
+            display: none;
+        }
+    }
+    .submitButton {
+        display: flex;
+        
+        .submit {
+        @extend button;
+        @extend .draw;
+        @extend .meet;
+        margin: 20px auto;
+        width: 150px;
+        
+        }
+    }
+}
