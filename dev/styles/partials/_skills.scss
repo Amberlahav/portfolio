@@ -10,11 +10,11 @@
     }
 
     .skills {
-        // width: 70%;
+ 
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         align-content: center;
     }
      .devicon {
@@ -24,4 +24,34 @@
             color: white;
             text-shadow: 1px 1px 2px black;
         }
+        p {
+            color: #FFF;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px black;
+            margin: 5px;
+        }
+        // media queries:
+    @media (max-width:940px) {
+        .devicon {
+            font-size:4rem
+        }
+    }
+
+    @media (max-width:768px) {
+         .devicon {
+            font-size:3.6rem
+        }
+    }
+
+    @media (max-width:480px) {
+        height: 65vh;
+        padding: 0 10px;
+        .devicon {
+            font-size:4rem;
+            margin: 10px;
+        }
+        p {
+            margin-bottom:20px;
+        }
+    }
 }

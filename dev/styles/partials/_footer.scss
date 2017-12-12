@@ -1,7 +1,23 @@
 footer {
-    height: 15vh;
+    height: 10vh;
     background: linear-gradient(rgba(#a3a7fc, 0.8),rgba(darken(#6bb4fa, 30%), 0.7));
     p.copyright {
         margin: 0;
+        padding-top:30px;
+        font-size: 1.2rem;
+        color: #FFF;
+    }
+    @media (max-width:940px) {
+        p.copyright {
+            padding-top:20px;
+            font-size:1.1rem;
+        }
+    }
+
+    @media (max-width:480px) {
+        p.copyright {
+            padding-top:15px;
+            font-size:1rem;
+        }
     }
 }

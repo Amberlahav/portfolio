@@ -5,51 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Poppins:300,400" rel="stylesheet">
-    
+
 
     <link rel="stylesheet" type="text/css" href="public/styles/style.css">
     <title>Amber Lahav</title>
 
 </head>
 <body>
-    <header>
-        <div class="titles wrapper">
-            <!-- <div class="titles"> -->
-                <div class="typewriter">
-                    <h1 class="typing">Hello, I'm Amber.</h1>
-                    <p>I'm a web developer based in Toronto.</p>
-                    <a href="#about">See More</a>
-                <!-- </div> -->
-                <!-- <h1>Amber Lahav</h1> -->
+    <header id="home">
+        <div class="navBar">
+            <div class="logo"></div>
+            <div class="nav-wrap">
+                <nav class="navigation">
+                    <div class="hamburger">
+                        <span class="bars"></span>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#skills">Skills</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                
+                    </div>
+                </nav>
+                <!-- <nav class="menu">
+                    <ul id="menu">
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#skills">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav> -->
             </div>
-            <ul class="nav">
-                <li>
-                    <a href="#about">about</a></li>
-                <li>
-                    <a href="#skills">skills</a></li>
-                <li>
-                    <a href="#portfolio">portfolio</a></li>
-                <li>
-                    <a href="#contact">contact</a></li>
-            </ul>
-            <!-- <h2>Develop, Design, Deliver.</h2> -->
+            <div class="toggle-nav js-nav" id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+        </div>
+        <div class="titles wrapper">
+                    <h1 class="typing">Hello, I'm Amber.</h1>
+                    <h2>I'm a web developer based in Toronto.</h2>
+                    <div class="headshot">
+                        <img class="imageColour" src="public/images/headshotColour.jpg" alt="Portrait of Amber Lahav">
+                        <img class="imageBW" src="public/images/headshotBW.jpg" alt="Portrait of Amber Lahav">
+                        <a href="#about"><i class="down fa fa-angle-down" aria-hidden="true"></i></a>
+                    
+            </div>
+
         </div>
     </header>
     <main>
 
         <section class="about" id="about">
             <div class="wrapper">
-                <div class="headshot">
-                    <img class="imageColour" src="public/images/headshotColour.jpg" alt="Portrait of Amber Lahav">
-                    <img class="imageBW" src="public/images/headshotBW.jpg" alt="Portrait of Amber Lahav">
+
                 
+               
+                <div class="aboutDescription">
+                    <h2>About Me</h2>
+                    <p>My name is Amber and I'm a web developer with a passion for creativity and solving challenges. I recently graduated from HackerYou's immersive web development program, where I gained valuable skills in front-end development, as well as the ability to push myself and learn new things quickly. Before that, I graduated from Ryerson University's Graphic Communications Management program with a minor in e-Commerce. I strive to develop and design products with user experience, clean code and accessibility standards in mind.</p>
+
                 </div>
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus totam perspiciatis, inventore qui, tempora quos sed id nihil earum dolorum odit sit. Natus, eos qui porro doloribus ratione ipsum, unde et blanditiis dolor accusantium tempore. Aliquam illo magnam hic cumque iusto quod voluptate ratione assumenda aperiam ut, temporibus officia possimus enim iure fuga impedit vitae quisquam eaque aspernatur nulla amet!
-                I am endlessly</p>
-                <div class="aboutIcons">
+                <h3>I am constantly</h3>
+                <div class="draw meet aboutIcons">
+                   
                     <div class="developing">
                         <div class="iconHolder">
                             <img class="mockupImage" src="public/images/developing.png" alt="">
@@ -68,12 +113,15 @@
                         </div>
                         <h3>Discovering</h3>
                     </div>
+                    
+                    
                      <!-- coding by Mello from the Noun Project
                      Computer Learning by Prithvi from the Noun Project
                      Art by UNiCORN from the Noun Project -->
-                </div>
+                <!-- </div> -->
                 <!-- <p>New things.</p> -->
             </div>
+            <h3>New things.</h3>
         </section>
 
         <section class="mySkills" id="skills">
@@ -81,119 +129,167 @@
             <div class="wrapper"> 
                 <h2>My Skills</h2>
                 <div class="skills">
-                    <i class="devicon devicon-html5-plain"></i>
-                    <i class="devicon devicon-css3-plain"></i>
-                    <i class="devicon devicon-sass-original"></i>
-                    <i class="devicon devicon-javascript-plain"></i>
-                    <i class="devicon devicon-jquery-plain"></i>
-                    <i class="devicon devicon-react-original"></i>
-                    <i class="devicon devicon-gulp-plain"></i>
-                    <i class="devicon devicon-github-plain"></i>
-                    <i class="devicon devicon-photoshop-plain"></i>
-                    <i class="devicon devicon-illustrator-plain"></i>
-                </div>
+                    <div class="skill">
+                        <i class="devicon devicon-html5-plain"></i>
+                        <p>HTML5</p>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-css3-plain"></i>
+                        <P>CSS3</P>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-javascript-plain"></i>
+                        <P>JavaScript</P>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-jquery-plain"></i>
+                        <p>jQuery</p>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-sass-original"></i>
+                        <p>Sass</p>
+                    </div>
+                    
+                    <div class="skill">
+                        <i class="devicon devicon-react-original"></i>
+                        <p>React</p>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-gulp-plain"></i>
+                        <p>Gulp</p>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-github-plain"></i>
+                        <p>Github</p>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-photoshop-plain"></i>
+                        <p>Photoshop</p>
+                    </div>
+                    <div class="skill">
+                        <i class="devicon devicon-illustrator-plain"></i>
+                        <p>Illustrator</p>
+                    </div>
+                    </div>
             </div>
         </section>
 
         <section class="portfolio" id="portfolio">
             <div class="wrapper">
-                <h2>Portfolio</h2>
+            <h2 class="sectionTitle">Portfolio</h2>
+            <div class="project1">
                 <div class="project">
                     <div class="projectDescription projectDescription1">
-                        <h3>Project Title</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos et dolore in libero ut earum officiis hic itaque odio
-                            numquam.
-                        </p>
-                        <div class="buttons">
-                            <button class="buttonLive draw meet">View Live</button>
-                            <button class="draw meet">View On Github</button>
+                        <div class="projectText">
+                            <h2>The Snack Hack</h2>
+                            <h3>JavaScript / jQuery / API / HTML5 / SASS </h3>
+                            <p>This app uses an Ajax request from an API to generate a list of snacks that a user can and cannot have based on their food allergy or restriction.
+                            </p>
+                            <div class="buttons">
+                                <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/the_snack_hack">View Live</a>
+                                <a target="_blank" class="link draw meet">View On Github</a>
+                            </div>
                         </div>
                     </div>
                     <div class="imageContainer imageContainer1">
                         <img src="public/images/project4_macbook.png" alt="Preview of project4 on a Macbook mockup">
                     </div>
                 </div>
-                <!-- </div> -->
-                <div class="dottedLine">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <div class="line"></div>
+                <!-- <div class="dottedLine"> -->
+                    <!-- <svg class="right" id="lineAnimation" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
-                        <g>
-                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="182.4844" y1="266.25" x2="511.3555" y2="266.25">
-                                <stop offset="0" style="stop-color:#2E307E" />
-                                <stop offset="0.0733" style="stop-color:#413683" />
-                                <stop offset="0.2214" style="stop-color:#5E418D" />
-                                <stop offset="0.3682" style="stop-color:#744C96" />
-                                <stop offset="0.5115" style="stop-color:#83549E" />
-                                <stop offset="0.6499" style="stop-color:#8C59A3" />
-                                <stop offset="0.7775" style="stop-color:#8F5BA5" />
-                            </linearGradient>
-                    
-                            <path class="path dashed" fill="none" stroke-width="6" stroke="url(#SVGID_1_)" stroke-linejoin="round" stroke-miterlimit="10"
-                                d="M18.107,542.125V370.357c0-5.504,4.503-10.007,10.008-10.007h670.219c5.504,0,10.008-4.503,10.008-10.008 c0,0,0-91.787,0-125.718"
-                            />
-                    
-                            <path class="dashed" fill="none" stroke="white" stroke-width="8" stroke-linejoin="round" stroke-miterlimit="10" d="M18.107,542.125V370.357c0-5.504,4.503-10.007,10.008-10.007h670.219c5.504,0,10.008-4.503,10.008-10.008 c0,0,0-91.787,0-125.718"
-                            />
-                        </g>
-                    </svg>
+                        <path class="path lineAnimation" fill="none" stroke="#a3a7fc" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726" />
+                        
+                        <path class="dashed" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" stroke-miterlimit="10" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726" />
+                    </svg> -->
                 </div>
     <!-- Animate Dashed line - based off https://css-tricks.com/svg-line-animation-works 
     -->
+    <div class="project2">
         <div class="project">
             <div class="imageContainer imageContainer2">
-                <img src="public/images/project4_macbook.png" alt="Preview of project4 on a Macbook mockup">
+                <img src="public/images/project5_macbook.png" alt="Preview of project4 on a Macbook mockup">
             </div>
             <div class="projectDescription projectDescription2">
-                <h3>Project Title</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos et dolore in libero ut earum officiis hic itaque odio numquam.</p>
-                <div class="buttons">
-                    <button class="buttonLive draw meet">View Live</button>
-                    <button class="draw meet">View On Github</button>
+                <div class="projectText">
+                    <h2>Plant Parenthood</h2>
+                    <h3>React / Firebase / JavaScript / HTML5 / SASS </h3>
+                    <p>This app lets users grow their own virtual plant. The user must water their plant once every 24 hours to keep their plant alive and growing. The app tracks the time of when they last watered it, and updates their plant's status.
+                    </p>
+                    <div class="buttons">
+                        <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/plant_parenthood">View Live</a>
+                        <a target="_blank" class="link draw meet">View On Github</a>
+                    </div>
                 </div>
             </div>
+            </div>
+            <!-- <svg class="left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                <path class="path lineAnimation" fill="none" stroke="#a3a7fc" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726"
+                />
             
+                <path class="dashed" data-aos="example-anim2" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" stroke-miterlimit="10" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726"
+                />
+            </svg> -->
         </div>
-
+        <div class="project3">
             <div class="project">
                 <div class="projectDescription projectDescription3">
-                    <h3>Project Title</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos et dolore in libero ut earum officiis hic itaque odio
-                        numquam.</p>
-                    <div class="buttons">
-                        <button class="buttonLive draw meet">View Live</button>
-                        <button class="draw meet">View On Github</button>
+                    <div class="projectText">
+                        <h2>Date Night Outfit Generator</h2>
+                        <h3>JavaScript / jQuery / HTML5 / SASS </h3>
+                        <p>This is an app to help those who are indecisive about what to wear to a date. Users answer a few questions about their date night and get an outfit picked out for them based on their selected answers.
+                        </p>
+                        <div class="buttons">
+                            <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/date_night_outfit_generator">View Live</a>
+                            <a target="_blank" class="link draw meet">View On Github</a>
+                        </div>
                     </div>
                 </div>
                 <div class="imageContainer imageContainer3">
-                    <img src="public/images/project4_macbook.png" alt="Preview of project4 on a Macbook mockup">
+                    <img src="public/images/project3_macbook.png" alt="Preview of project4 on a Macbook mockup">
                 </div>
             </div>
+            <!-- <svg class="right" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+                <path class="path lineAnimation" fill="none" stroke="#a3a7fc" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726"
+                />
+            
+                <path class="dashed" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" stroke-miterlimit="10" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726"
+                />
+            </svg> -->
             <!-- Animate Dashed line - based off https://css-tricks.com/svg-line-animation-works 
                 -->
-            
-            <div class="project projectEven">
+    </div>  
+    <div class="project4">
+            <div class="project">
                 <div class="imageContainer imageContainer4">
-                    <img src="public/images/project4_macbook.png" alt="Preview of project4 on a Macbook mockup">
+                    <img src="public/images/project2_macbook.png" alt="Preview of project4 on a Macbook mockup">
                 </div>
                 <div class="projectDescription projectDescription4">
-                    <h3>Project Title</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos et dolore in libero ut earum officiis hic itaque odio
-                        numquam.
-                    </p>
-                    <div class="buttons">
-                        <button class="buttonLive draw meet">View Live</button>
-                        <button class="draw meet">View On Github</button>
+                    <div class="projectText">
+                        <h2>Single Page Responsive Website</h2>
+                        <h3>HTML5 / SASS </h3>
+                        <p>A fully responsive website converted from a PSD template image, following best practices to fit the layout and functionality of every possible device a user may be viewing it on.
+                        </p>
+                        <div class="buttons">
+                            <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/trada">View Live</a>
+                            <a target="_blank" class="link draw meet">View On Github</a>
+                        </div>
                     </div>
                 </div>
                 
             </div>
         </div>
+    </div>
     </section>
         <section class="contact" id="contact">
             <div class="wrapper">
                 <h2>Contact Me</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, delectus itaque. Dicta nisi rem provident illo voluptate in iste doloremque!</p>
-                <form>
+                <h3>Interested in working together? Let's get in touch!</h3> 
+                <p>Feel free to send me a message here, or emailing me at amber@amberlahav.com.</p>
+                <form action="https://formspree.io/amber@amberlahav.com" method="POST">
                     <div class="contactInfoInputs">
                         <input type="name" name="name" placeholder="Name *" id="name" class="name">
                 
@@ -217,21 +313,34 @@
                     </label>
                 
                 </form>
-                <div class="submitButton">
-                    <input type="submit" name="submit" value="Send" class="submit draw meet">
+                <div class="submitButton draw meet">
+                    <input type="submit" name="submit" value="Send" class="submit"/>
+                </div>
+                <div class="socialIcons">
+                    <a target="_blank" href="https://twitter.com/AmberLahav">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/amber-lahav/">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/Amberlahav">
+                        <i class="fa fa-github-alt"></i>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <!-- <div class="wrapper"> -->
-        <p class="copyright">Copyright ©2015 Designed by
-                <span>theme</span> All Rights Reserved.</p>
-        <!-- </div> -->
+        <div class="wrapper">
+        <p class="copyright">Copyright ©2016 Designed by
+                Moninul Ahsan. Developed by Amber Lahav.</p>
+        </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="public/scripts/jquery.smooth-scroll.js"></script>
+    <script src="public/scripts/main.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script> -->
+    <!-- <script src="js/scrollmagic/minified/ScrollMagic.min.js"></script> -->
     
-    <!-- smooth scroll: -->
-    <!-- <script src="scripts/jquery.smooth-scroll.js"></script> -->
 </body>
 </html>

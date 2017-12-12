@@ -1,72 +1,88 @@
 // ABOUT SECTION STYLES:
 
 .about {
-    height: 90vh;
+    height: 100vh;
+    padding-top: 50px;
     .wrapper {
-        padding: 0px 100px;
+        padding: 0px 80px;
+        display: flex;
+        flex-direction: column;
     }
     // border: 1px solid blueviolet;
-    // move to header:
-    .headshot {
-        position: absolute;
-        top: 50%;
-        left: 62%;
-        transform: translate(-50%, -50%);
-        margin: 0 auto;
-        width: 18%;
-        transition: 2s ease;
-        &:hover > .imageBW {
-            display: none;
+
+  
+    p {
+        margin-bottom: 25px;
+    }
+    h3 {
+        font-size:1.6rem;
+        font-weight: 300;
+    }
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+        i {
+            color: $thirdColour;
         }
     }
-    .imageBW {
-        border-radius: 50%;
-        border: 15px solid linear-gradient($firstColour, $fourthColour);
-        position: absolute;
-        width: 100%;
-        // box-shadow: 0px 0px 2px black;
-    }
-    .imageColour {
-        border-radius: 50%;
-        border: 15px solid linear-gradient($firstColour, $fourthColour);
-        position:absolute;
-        width: 100%;
-        // box-shadow: 0px 0px 2px black;
-    }
-// move to header^
-
-    h3 {
-        @extend p;
-        font-weight: 400;
-        color: $sixthColour;
-    }
-
-    p{
-        font-family: $secondaryFont;
-        font-weight: lighter;
-        line-height: 1.75;
-        text-align: center;
-        
-    }
-    // 
     .aboutIcons {
         margin: 0 auto;
-        margin-top:20px;
-        width: 50%;
+        // margin-top:50px;
+        width: 60%;
         display: flex;
+        background: $fifthColour;
+
+ 
     }
     .iconHolder {
-
-        margin: 20px;
-        padding: 20px;
-        background-color: $fifthColour;
+        margin: 0 auto;
+        margin-bottom: 0;
+        padding: 10px;
+        // background-color: $fifthColour;
         border-radius: 50%;
-        // box-shadow: 0px 0px 6px lightgrey;
+        width: 50%;
+
+    }
+   
+    h3 {
+        margin: 15px;
     }
     img {
         width: 100%;
         margin: auto;
         // color: $fourthColour;
+    }
+
+    // media queries:
+
+    @media (max-width:940px) {
+        h3 {
+            font-size: 1.4rem;
+            margin:10px;
+        }
+    }
+
+    @media (max-width:768px) {
+         h3 {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width:480px) {
+        height: 110vh;
+        .wrapper {
+            padding: 0px 45px;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        p {
+            line-height: 1.75;
+            margin-bottom:20px;
+        }
+        .aboutIcons {
+            width: 90%;
+        }
     }
 
 }

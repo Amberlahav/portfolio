@@ -2,74 +2,216 @@
 
 header {
     height: 100vh;
-    background: linear-gradient(rgba(darken(#6bb4fa, 90%),0.7), rgba(#a3a7fc, 1), white),
-     url(../../public/images/hero6-min.jpg) center;
-    background-size: cover;
+    // background: linear-gradient(rgba(darken($fourthColour, 0%),0.9), 
+    // rgba(darken($sixthColour, 0%), 0.9), 
+    // white), url(../../public/images/hero3.jpeg) center;
+    // background-size: cover;
+    background:url(../../public/images/Graph2.png), linear-gradient(rgba(121, 127, 255, 0.8),rgba(121, 127, 255, 0.8));
+    background-position: bottom;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-attachment:fixed;
     position: relative;
-   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 62% 78%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 62% 78%, 0 100%);
 
-
-.titles {
-    width: 75%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.typewriter {
-    display: flex;
-    flex-direction: column;
-    // text-shadow: 1px 1px 3px black;
-    h1 {
-    font-size:5rem;
-    color:$thirdColour;
-    }
-    p {
-        font-size: 1.8rem;
-        color:$thirdColour;
-    }
-
-}
-a {
-        font-size: 1.3rem;
-        text-decoration: none;
-        text-align: center;
-        color:$thirdColour;
-        &:hover {
-            color: $firstColour;
+      .headshot {
+        position: relative;
+        margin: 0 auto;
+        width: 18%;
+        height: 20vh;
+        transition: 0.3s all ease;
+        &:hover > .imageBW {
+            display: none;
         }
     }
-ul {
-    list-style: none;
-    padding:10px 120px 0 0;
-    li {
-        @extend p;
-        line-height: 1.5;
-        font-weight: 400;
-        text-align: left;
-        // text-shadow: 1px 1px 1px black;
+    .down {
+        position: absolute;
+        left: 50%;
+        bottom:-100%;
+        transform: translateX(-50%);
+        z-index:25;
+        font-size: 5rem;
+        color: $thirdColour;
+
+    }
+    .imageBW {
+        border-radius: 50%;
+        border: 15px solid linear-gradient($firstColour, $fourthColour);
+        position: absolute;
+        width: 100%;
+        transition: 0.3s all ease;
+
+    }
+    .imageColour {
+        border-radius: 50%;
+        border: 15px solid linear-gradient($firstColour, $fourthColour);
+        position:absolute;
+        width: 100%;
+    }
+
+.navBar {
+    display: flex;
+    width: 100%;
+    z-index:60;
+    .logo {
+        width: 50%;
     }
 }
 
-h2 {
-    // padding: 30px 0 20px 0;
+.titles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 300;
+        color: #FFF;
+        text-shadow: 1px 1px 1px black;
+    }
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.hamburger {
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px 15px 5px;
+  
+  span {
+    vertical-align: middle;
+  }
+  .bars {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 5px;
+    background-color: $thirdColour;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+    &:before, &:after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 5px;
+      border-radius: 5px;
+      background-color: $thirdColour;
+      transition: all 0.3s ease;
+    
+    }
+    &:before {
+      top: 10px;
+    }
+    &:after {
+      bottom: 10px;
+    }
+  }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: $thirdColour }
+.open .hamburger .bars {
+  background-color: transparent;
+  transition: all 0.3s ease;
+    
+  
+  &::before {
+    top: 0;
+    transform:rotate(-45deg);
+  }
+  &::after {
+    bottom: 0;
+    transform:rotate(45deg);
+  }
 }
 
+.menu {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: rgba($fifthColour, 0.9);
+  box-shadow:0px 5px 20px 0px rgba(68, 84, 255, 0.3);
+  border-radius:5px;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  opacity: 0;
+  z-index: 999;
+  margin-top: 0;
+  transition: all 0.3s ease;
+    
+  
+  a {
+    color: $thirdColour;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+
+    
+    &:hover {
+      color: darken($secondColour, 10%);
+    }
+  }
 }
+
+.open .menu {
+  right: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+    
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50vh;
+    align-content: space-around;
+    justify-content: space-around;
+    li {
+        @extend p;
+        font-weight: 400;
+        text-align: center;
+
+    }
+}
+
+// media queries:
+
+    @media (max-width:940px) {
+        h1 {
+            font-size:4rem;
+        }
+        .headshot {
+            width: 20%;
+        }
+        .titles h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width:768px) {
+        h1 {
+            font-size:3.6rem;
+        }
+        .headshot {
+            width: 22%;
+        }
+    }
+
+    @media (max-width:480px) {
+        .titles h2 {
+            font-size: 2rem;
+        }
+    }
+
+
+}
+
+

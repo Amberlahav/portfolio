@@ -6,7 +6,7 @@
 $firstColour: #6bfaee;
 $secondColour: #a3a7fc;
 $thirdColour: #2e2e7f;
-$fourthColour: #9b4be6;
+$fourthColour: #b77ef0;
 $fifthColour: #f3f9ff;
 $sixthColour: #8991f7;
 $seventhColour: #8283a4;
@@ -39,8 +39,14 @@ img {
 
 h1 {
     // font-family: 'Cinzel Decorative', cursive;
+    
     font-family: $primaryFont;
-    font-size: 3rem;
+    font-weight:400;
+    font-size: 8rem;
+    color:#FFF;
+    text-shadow:1px 1px 1px black;
+    margin:10px;
+    text-align: center;
 }
 
 h2 {
@@ -50,6 +56,10 @@ h2 {
     font-weight: 300;
     color: $thirdColour;
 }
+
+// .sectionTitle {
+//   padding-top:60px;
+// }
 h2::after {
     content:'';
     height: 20px;
@@ -61,49 +71,67 @@ h2::after {
 
 
 h3 {
-    @extend h2;
-    font-size: 2rem;
+    font-family: $secondaryFont;
+    text-align: center;
+    color: $sixthColour;
+    font-size: 1.8rem;
     font-weight: 400;
 }
  p{
     font-family: $secondaryFont;
     font-weight: lighter;
-    font-size: 1.4rem;
-    line-height: 1.75;
+    font-size: 1.5rem;
+    line-height: 1.8;
     text-align: center;
-    color:$seventhColour;
+    color:$thirdColour;
  }
  a {
      @extend p;
+     font-size: 1.6rem;
+     text-decoration: none;
+    text-align: center;
+    color:#FFF;
+    &:hover {
+            color: $thirdColour;
+        }
  }
 
 svg {
     transform: rotate(180deg);
     height: 50vh;
     margin-left: 30%;
-    border: 1px solid orange;
+    position: relative;
+    bottom:180px;
 }
 
+.right {
+    transform: rotate(180deg);
+}
+.left {
+    transform: rotate(180deg) scaleX(-1);
+}
 .dashed{
-  stroke-dasharray: 25;
+  stroke-dasharray: 30;
 
 
 }
+
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 2s linear forwards;
+ 
 }
 
 h1.typing {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .12em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .1em; /* Adjust as needed */
-    animation: 
-    typing 4.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    // overflow: hidden; /* Ensures the content is not revealed until the animation */
+    // border-right: .12em solid $thirdColour; /* The typwriter cursor */
+    // white-space: nowrap; /* Keeps the content on a single line */
+    // margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    // letter-spacing: .1em; /* Adjust as needed */
+    // animation: 
+    // typing 4.5s steps(40, end),
+    // blink-caret .75s step-end infinite;
 }
 
 
@@ -117,21 +145,21 @@ h1.typing {
 }
 
 
-button {
+.link, .submit {
   @extend p;
   background: linear-gradient(-90deg, #6bb4fa 0%, #a3a7fc 100%);
   border: 0;
   box-sizing: border-box;
-  margin: 1em;
+  margin: 0;
   padding: 1em 2em;
   text-transform: uppercase;
   border-radius:5px;
   // Using inset box-shadow instead of border for sizing simplicity
-  box-shadow: 0px 5px 20px 0px rgba(68, 84, 255, 0.3);;
+  box-shadow: 0px 5px 20px 0px rgba(68, 84, 255, 0.3);
   color: white;
-  font-size: inherit;
-  font-weight: 700;
-  z-index:50;
+  font-size: 1.3rem;
+  font-weight: 400;
+  z-index:60;
   // Required, since we're setting absolute on pseudo-elements
   position: relative;
   vertical-align: middle;
@@ -145,12 +173,17 @@ button {
     height: 100%;
   }
 }
-
+.aboutIcons {
+  @extend .submit;
+  // box-shadow: none;
+  background: #FFF;
+  text-transform: none;
+}
 .buttonLive {
   margin-right: 10px;
 }
 
-.draw {
+.draw, .aboutIcons, .submit {
     transition: color 0.3s;
 
   &::before,
@@ -188,24 +221,23 @@ button {
     border-top-color: $secondColour; // Make borders visible
     border-right-color: $secondColour;
     transition:
-      width 0.2s ease-out, // Width expands first
-      height 0.2s ease-out 0.2s; // And then height
+      width 0.2s ease, // Width expands first
+      height 0.2s ease 0.2s; // And then height
   }
 
   &:hover::after {
     border-bottom-color: $secondColour; // Make borders visible
     border-left-color: $secondColour;
     transition:
-      border-color 0s ease-out 0.4s, // Wait for ::before to finish before showing border
-      width 0.2s ease-out 0.4s, // And then exanding width
-      height 0.2s ease-out 0.7s; // And finally height
+      border-color 0s ease 0.4s, // Wait for ::before to finish before showing border
+      width 0.2s ease 0.4s, // And then exanding width
+      height 0.2s ease 0.7s; // And finally height
   }
 }
-.meet {
+.meet, .aboutIcons, .submit {
   
   &:hover {
     color: $secondColour;
-    // background: linear-gradient(-90deg, lighten(#6bb4fa, 5%), lighten(#a3a7fc, 5%));
     background: $fifthColour;
   }
 
@@ -225,9 +257,43 @@ button {
     border-bottom-color: $secondColour;
     border-left-color: $secondColour;
     transition: // Animate height first, then width
-      height 0.2s ease-out,
-      width 0.2s ease-out 0.2s;
+      height 0.2s ease,
+      width 0.2s ease 0.2s;
   }
 
 }
 
+@media (max-width:940px) {
+    .wrapper {
+      width: 85%;
+    }
+    h1 {
+      font-size:2.6rem
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .link {
+      padding:10px;
+    }
+    // h3 {
+    //   font-size: 1.4rem;
+    //   margin:5px;
+    // }
+    p {
+      font-size:1.2rem;
+      line-height:1.7;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper {
+      width: 90%;
+    }
+}
+
+@media (max-width:480px) {
+    .wrapper {
+      width: 95%;
+    }
+}

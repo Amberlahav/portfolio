@@ -1,20 +1,23 @@
 // PORTFOLIO STYLES:
 
 .portfolio {
+    padding: 60px 0;
     .wrapper {
         width: 85%;
     }
     .project {
         //  border: 1px solid green;
-        height: 70vh;
+        height: 90vh;
         // border: 1px solid blueviolet;
         display: flex;
         justify-content: center;
         position: relative;
-        margin-top: 100px;
 
     }
-    
+
+    .project1, .project2, .project3, .project4 {
+         height: 90vh;
+    }
     .projectDescription {
         z-index:5;
         background-color: $fifthColour;
@@ -22,19 +25,38 @@
         top: 50%;
         transform: translateY(-50%);
         width: 50%;
-        height: 50vh;
-        h3, p {
+        height: 60vh;
+        h2, p {
         text-align: left;
         }
+        h3 {
+            font-size: 1.4rem;
+            text-align:left;
+        }
+        h2 {
+            font-weight: 400;
+            margin: 0;
+            font-size:2.2rem;
+        }
         h3::after {
+            display:none;
+        }
+        h2::after {
             margin: 0;
         }
     }
-    .dottedLine {
+    .line {
         position: relative;
+        left:25%;
+        background:url(../../public/images/doted_line.png);
+        background-size: contain;
+        background-position:center;
+        background-repeat:no-repeat;
         bottom: 150px;
-        border: 1px solid red;
-        display: none;
+        height: 50vh;
+        width: 50%;
+        // border: 1px solid red;
+
     }
     .projectDescription1, .projectDescription3 {
         padding: 30px 100px 50px 50px;
@@ -43,8 +65,13 @@
     }
 
     .projectDescription2, .projectDescription4 {
-        padding: 30px 50px 50px 100px;
+        padding: 30px 30px 50px 100px;
         right:0%;
+    }
+    .projectText {
+        position: relative;
+        top:50%;
+        transform:translateY(-50%);
     }
     .imageContainer {
         width: 60%;
@@ -65,6 +92,78 @@
         max-width:100%;
         // position: absolute;
         
+    }
+    .buttons {
+        display: flex;
+    }
+    
+    @media (max-width:940px) {
+        .project {
+            height: 80vh;
+        }
+        h2 {
+        font-size: 1.6rem;
+        }
+        h3 {
+            font-size:1.4rem;
+        }
+        p {
+            font-size:1.3rem;
+        }
+        .projectDescription1, .projectDescription3 {
+        padding: 20px 80px 40px 40px;
+        }
+
+        .projectDescription2, .projectDescription4 {
+        padding: 20px 20px 40px 80px;
+        }
+
+    }
+
+    @media (max-width:768px) {
+        .project{
+        height: 60vh;
+        }
+        .project1 {
+            margin-top:80px;
+        }
+        h2 {
+        font-size: 1.4rem;
+        }
+        h3 {
+            font-size:1.2rem;
+        }
+        p {
+            font-size:1.1rem;
+        }
+        .projectDescription1, .projectDescription3 {
+        padding: 10px 60px 30px 30px;
+        }
+
+        .projectDescription2, .projectDescription4 {
+        padding: 10px 10px 30px 60px;
+        }
+    }
+
+    @media (max-width:480px) {
+        padding-bottom:40px;
+        .project {
+            flex-direction:column;
+            height: 100vh;
+        }
+        .projectDescription {
+            width: 100%;
+        }
+        .projectDescription {
+            top:25%;
+        }
+        .imageContainer {
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            right: 0;
+            top: 33%;
+        }
     }
     
 }

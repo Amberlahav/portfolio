@@ -1,11 +1,24 @@
-import Typed from 'typed.js';
+
+
 const portfolio = {};
 
 
 portfolio.init = function () {
-    
-    // portfolio.events();
 
+    
+
+    $(".hamburger").click(function () {
+        $(".navigation").toggleClass("open");
+    })
+
+    $(function () {
+
+        // this code initializes smooth scroll:
+        $('a').smoothScroll({
+            speed: 650,
+        });
+
+    });
 };
 
 $(function () {
