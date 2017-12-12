@@ -1,4 +1,3 @@
-// CONTACT STYLES
 
 .contact {
     height: 90vh;
@@ -6,14 +5,12 @@
     background: url(../../public/images/map.png);
     background-size: cover;
     form {
-        
-        .inputs {
         height: 200px;
         display: flex;
         flex-direction: row;
         align-content: space-between;
         padding: 20px;
-        }
+      
         .contactInfoInputs {
             display: flex;
             flex-direction: column;
@@ -21,14 +18,12 @@
             width: calc(50% - 20px);
             margin-right: 20px;
             
-            
         }
         input, textarea {
             @extend p;
             text-align: left;
             padding: 10px;
             border:1px solid $sixthColour;
-            border-radius:5px;
         }
         textarea {
             width: 50%;
@@ -40,12 +35,14 @@
     }
     .submitButton {
         display: flex;
-        border:none;
+        
+        .submit {
+        
         margin: 20px auto;
-        width: 100px;
-        padding-left:30px;
+        width: 150px;
+        
+        }
     }
-    
     .socialIcons {
         width: 20%;
         margin:0 auto;
@@ -88,6 +85,7 @@
            margin:10px;
        }
     }
+
     @media (max-width:375px) {
         height: 130vh;
         form {
