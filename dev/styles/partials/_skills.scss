@@ -54,4 +54,12 @@
             margin-bottom:20px;
         }
     }
+
+    @media (max-width:375px) {
+        height: 50vh;
+        .devicon {
+            font-size:3.6rem;
+            margin: 5px;
+        }
+    }
 }

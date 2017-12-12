@@ -6,11 +6,12 @@ header {
     // rgba(darken($sixthColour, 0%), 0.9), 
     // white), url(../../public/images/hero3.jpeg) center;
     // background-size: cover;
-    background:url(../../public/images/Graph2.png), linear-gradient(rgba(121, 127, 255, 0.8),rgba(121, 127, 255, 0.8));
-    background-position: bottom;
-    background-size: contain;
+    background:url(../../public/images/Graph2.png), linear-gradient(rgba(121, 127, 255, 0.9),rgba(121, 127, 255, 0.9)), url(../../public/images/computer2.jpg);
+    background-position: bottom, center, center;
+    background-size:100%, cover, cover;
     background-repeat: no-repeat;
     position: relative;
+    background-attachment: scroll, scroll, fixed;
 
       .headshot {
         position: relative;
@@ -30,8 +31,8 @@ header {
         z-index:25;
         font-size: 5rem;
         color: $thirdColour;
-
     }
+    
     .imageBW {
         border-radius: 50%;
         border: 15px solid linear-gradient($firstColour, $fourthColour);
@@ -68,7 +69,10 @@ header {
         font-size: 2.4rem;
         font-weight: 300;
         color: #FFF;
-        text-shadow: 1px 1px 1px black;
+        // text-shadow: 1px 1px 1px black;
+    }
+    h2::after {
+        display:none;
     }
 }
 
@@ -186,7 +190,7 @@ ul {
 
     @media (max-width:940px) {
         h1 {
-            font-size:4rem;
+            font-size:5rem;
         }
         .headshot {
             width: 20%;
@@ -198,7 +202,7 @@ ul {
 
     @media (max-width:768px) {
         h1 {
-            font-size:3.6rem;
+            font-size:4rem;
         }
         .headshot {
             width: 22%;
@@ -208,6 +212,9 @@ ul {
     @media (max-width:480px) {
         .titles h2 {
             font-size: 2rem;
+        }
+        .down {
+            bottom:-30px;
         }
     }
 

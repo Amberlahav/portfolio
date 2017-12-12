@@ -84,5 +84,16 @@
             width: 90%;
         }
     }
+    @media (max-width:375px) {
+        .aboutIcons {
+            width: 100%;
+        }
+        .iconHolder {
+            padding: 5px;
+        }
+        h3 {
+            font-size:1.1rem;
+        }
+    }
 
 }

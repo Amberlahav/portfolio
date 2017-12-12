@@ -43,22 +43,7 @@
                 
                     </div>
                 </nav>
-                <!-- <nav class="menu">
-                    <ul id="menu">
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#skills">Skills</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav> -->
+               
             </div>
             <div class="toggle-nav js-nav" id="nav-icon3">
                 <span></span>
@@ -75,6 +60,7 @@
                         <img class="imageColour" src="public/images/headshotColour.jpg" alt="Portrait of Amber Lahav">
                         <img class="imageBW" src="public/images/headshotBW.jpg" alt="Portrait of Amber Lahav">
                         <a href="#about"><i class="down fa fa-angle-down" aria-hidden="true"></i></a>
+                        <!-- <i class="up fa fa-chevron-up" aria-hidden="true"></i> -->
                     
             </div>
 
@@ -84,12 +70,10 @@
 
         <section class="about" id="about">
             <div class="wrapper">
-
-                
                
                 <div class="aboutDescription">
                     <h2>About Me</h2>
-                    <p>My name is Amber and I'm a web developer with a passion for creativity and solving challenges. I recently graduated from HackerYou's immersive web development program, where I gained valuable skills in front-end development, as well as the ability to push myself and learn new things quickly. Before that, I graduated from Ryerson University's Graphic Communications Management program with a minor in e-Commerce. I strive to develop and design products with user experience, clean code and accessibility standards in mind.</p>
+                    <p>Welcome! My name is Amber and I'm a web developer with a passion for being creative and solving challenges. I recently graduated from HackerYou's immersive web development program, where I gained valuable skills in front-end development, as well as the ability to push myself and learn new things quickly. Before that, I graduated from Ryerson University's Graphic Communications Management program with a minor in e-Commerce. I strive to develop and design products with user experience, clean code and accessibility standards in mind.</p>
 
                 </div>
                 <h3>I am constantly</h3>
@@ -127,7 +111,7 @@
         <section class="mySkills" id="skills">
            
             <div class="wrapper"> 
-                <h2>My Skills</h2>
+                <h2>Skills & Tools</h2>
                 <div class="skills">
                     <div class="skill">
                         <i class="devicon devicon-html5-plain"></i>
@@ -195,7 +179,7 @@
                         <img src="public/images/project4_macbook.png" alt="Preview of project4 on a Macbook mockup">
                     </div>
                 </div>
-                <div class="line"></div>
+                <div class="line1"></div>
                 <!-- <div class="dottedLine"> -->
                     <!-- <svg class="right" id="lineAnimation" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
@@ -224,6 +208,7 @@
                 </div>
             </div>
             </div>
+            <div class="line2"></div>
             <!-- <svg class="left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
                 <path class="path lineAnimation" fill="none" stroke="#a3a7fc" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726"
@@ -251,6 +236,7 @@
                     <img src="public/images/project3_macbook.png" alt="Preview of project4 on a Macbook mockup">
                 </div>
             </div>
+            <div class="line1"></div>
             <!-- <svg class="right" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
                 <path class="path lineAnimation" fill="none" stroke="#a3a7fc" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M5.55,533.125V351.351h701.774c0,0,0-101.794,0-135.726"
@@ -290,34 +276,34 @@
                 <h3>Interested in working together? Let's get in touch!</h3> 
                 <p>Feel free to send me a message here, or emailing me at amber@amberlahav.com.</p>
                 <form action="https://formspree.io/amber@amberlahav.com" method="POST">
-                    <div class="contactInfoInputs">
-                        <input type="name" name="name" placeholder="Name *" id="name" class="name">
-                
-                        <label for="name" class="visually-hidden">Name
-                            <span>*</span>
-                        </label>
-                
-                        <input type="email" name="email" placeholder="Email *" id="email" class="email">
-                        <label for="email" class="visually-hidden">Email
-                            <span>*</span>
-                        </label>
-                
-                        <input type="subject" name="subject" placeholder="Subject *" id="subject" class="subject">
-                        <label for="subject" class="visually-hidden">Subject
-                            <span>*</span>
-                        </label>
+                    <div class="inputs">
+                        <div class="contactInfoInputs">
+                            <input type="name" name="name" placeholder="Name *" id="name" class="name">
+                    
+                            <label for="name" class="visually-hidden">Name
+                                <span>*</span>
+                            </label>
+                    
+                            <input type="email" name="_replyto" placeholder="Email *" id="email" class="email">
+                            <label for="email" class="visually-hidden">Email
+                                <span>*</span>
+                            </label>
+                    
+                            <input type="subject" name="subject" placeholder="Subject *" id="subject" class="subject">
+                            <label for="subject" class="visually-hidden">Subject
+                                <span>*</span>
+                            </label>
+                        </div>
+                        <textarea name="message" placeholder="Message *" cols="40" rows="12" class="message"></textarea>
                     </div>
-                    <textarea name="Message" placeholder="Message *" cols="40" rows="12" class="message"></textarea>
                     <label for="Message" class="visually-hidden">Message
                         <span>*</span>
                     </label>
-                
+                    <input type="submit" name="submit" value="Send" class="submit submitButton draw meet" />
                 </form>
-                <div class="submitButton draw meet">
-                    <input type="submit" name="submit" value="Send" class="submit"/>
-                </div>
+                
                 <div class="socialIcons">
-                    <a target="_blank" href="https://twitter.com/AmberLahav">
+                    <a target="_blank" href="https://twitter.com/Ambercodes_">
                         <i class="fa fa-twitter"></i>
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/in/amber-lahav/">
