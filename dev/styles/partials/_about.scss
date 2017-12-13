@@ -51,6 +51,7 @@
 
     p.myEmail {
         text-align: center;
+        margin-top:20px;
     }
     h3 {
         font-size:1.4rem;
@@ -111,20 +112,51 @@
     // media queries:
 
     @media (max-width:940px) {
-        h3 {
+        // h2 {
+        //     font-size: 2rem;
+        //     // margin:10px;
+        // }
+        p {
             font-size: 1.4rem;
-            margin:10px;
         }
     }
 
     @media (max-width:768px) {
-         h3 {
+        //  h2 {
+        //     font-size: 1.8rem;
+        // }
+        p {
             font-size: 1.3rem;
+        }
+        .imageIcons {
+            width: 45%;
+        }
+    }
+    @media (max-width:680px) {
+        padding: 50px 0;
+        height: 155vh;
+        p, h2 {
+            text-align: center;
+            margin-top:0;
+        }
+        h2::after {
+            margin:0 auto;
+        }
+        .aboutDescription {
+            flex-direction: column;
+        }
+        .imageIcons {
+            width: 60%;
+            margin: 0 auto;
+        }
+        .welcomeText {
+            width: 100%;
+            margin:0;
         }
     }
 
     @media (max-width:480px) {
-        height: 110vh;
+        height: 180vh;
         .wrapper {
             padding: 0px 45px;
         }
@@ -135,9 +167,11 @@
             line-height: 1.75;
             margin-bottom:20px;
         }
-        .aboutIcons {
+        .imageIcons {
             width: 90%;
+            margin: 0 auto;
         }
+        
     }
     @media (max-width:375px) {
         .aboutIcons {
