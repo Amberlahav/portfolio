@@ -6,9 +6,7 @@
         width: 85%;
     }
     .project {
-        //  border: 1px solid green;
         height: 90vh;
-        // border: 1px solid blueviolet;
         display: flex;
         justify-content: center;
         position: relative;
@@ -32,17 +30,15 @@
         h2, p {
         text-align: left;
         }
+        
         h3 {
             font-size: 1.8rem;
             text-align:left;
         }
-        h2.sectionTitle {
-            font-weight: 400;
-            margin: 0;
-            font-size:3.2rem;
-        }
+        
         h2.projectTitle {
             font-size:2.6rem;
+            margin-top:0;
         }
         h3::after {
             display:none;
@@ -62,20 +58,22 @@
         bottom: 150px;
         height: 50vh;
         width: 50%;
-        // border: 1px solid red;
 
+    }
+    .buttons {
+        padding-top:10px;
     }
     .line2 {
         transform: rotate(180deg) scaleX(-1);
     }
     .projectDescription1, .projectDescription3 {
-        padding: 30px 100px 50px 50px;
+        padding: 50px 100px 50px 50px;
         left: 0%;
         text-align:right;
     }
 
     .projectDescription2, .projectDescription4 {
-        padding: 30px 30px 50px 100px;
+        padding: 50px 30px 50px 100px;
         right:0%;
     }
     .projectText {

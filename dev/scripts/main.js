@@ -18,22 +18,14 @@ portfolio.init = function () {
         showCursor: false,
         cursorChar: ""
     });
-    // setTimeout(function () {
-    //     $(".typer").typed({
-    //         strings: ["developing", "^222 designing", "^111 discovering"],
-    //         typeSpeed: 90,
-    //         startDelay: 0,
-    //         backSpeed: 65,
-    //         backDelay: 900,
-    //         loop: true,
-    //         loopCount: false,
-    //         showCursor: true,
-    //         cursorChar: "",
-    //         attr: null,
-    //         contentType: 'html',
-    //         callback: function () { }
-    //     })
-    // })
+    
+    AOS.init();
+
+    function hasTouch() {
+        return 'ontouchstart' in document.documentElement
+            || navigator.maxTouchPoints > 0
+            || navigator.msMaxTouchPoints > 0;
+    }
 
 
     $(".hamburger").click(function () {

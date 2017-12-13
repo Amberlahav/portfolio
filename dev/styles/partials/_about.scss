@@ -112,15 +112,16 @@
     // media queries:
 
     @media (max-width:940px) {
-        // h2 {
-        //     font-size: 2rem;
-        //     // margin:10px;
-        // }
+
         p {
             font-size: 1.4rem;
         }
     }
 
+    @media (max-width:830px) {
+        padding: 50px 20px;
+        height: 90vh;
+    }
     @media (max-width:768px) {
         //  h2 {
         //     font-size: 1.8rem;
@@ -133,11 +134,14 @@
         }
     }
     @media (max-width:680px) {
-        padding: 50px 0;
-        height: 155vh;
+        padding: 50px 10px;
+        height: 145vh;
         p, h2 {
             text-align: center;
             margin-top:0;
+        }
+        h2 {
+            margin: 20px;
         }
         h2::after {
             margin:0 auto;
@@ -146,7 +150,7 @@
             flex-direction: column;
         }
         .imageIcons {
-            width: 60%;
+            width: 50%;
             margin: 0 auto;
         }
         .welcomeText {
@@ -156,7 +160,8 @@
     }
 
     @media (max-width:480px) {
-        height: 180vh;
+       height: 150vh;
+        padding: 60px 18px;
         .wrapper {
             padding: 0px 45px;
         }
@@ -168,12 +173,20 @@
             margin-bottom:20px;
         }
         .imageIcons {
-            width: 90%;
+            width: 70%;
             margin: 0 auto;
         }
         
     }
+     @media (max-width:400px) {
+        padding: 50px 8px;
+        height: 160vh;
+        .imageIcons {
+            width: 85%;
+        }
+    }
     @media (max-width:375px) {
+        height: 180vh;
         .aboutIcons {
             width: 100%;
         }
