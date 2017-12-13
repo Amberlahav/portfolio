@@ -51,9 +51,9 @@ h1 {
 
 h2 {
     font-family: $secondaryFont;
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     color: $thirdColour;
 }
 
@@ -62,10 +62,10 @@ h2 {
 // }
 h2::after {
     content:'';
-    height: 20px;
+    height: 15px;
     width:40px;
     display:block;
-    border-bottom: 1px solid $sixthColour;
+    border-bottom: 2px solid $sixthColour;
     margin: 0 auto;
     }
 
@@ -85,16 +85,25 @@ h3 {
     text-align: center;
     color:$thirdColour;
  }
+ .myEmail {
+        text-transform: lowercase;
+        font-weight: 400;
+    }
  a {
      @extend p;
-     font-size: 1.6rem;
-     text-decoration: none;
+    font-size: 1.6rem;
+    text-decoration: none;
     text-align: center;
     color:#FFF;
+    outline: none;
     &:hover {
             color: $thirdColour;
         }
  }
+
+ a:active, a:focus {
+  outline: none;
+}
 
 svg {
     transform: rotate(180deg);

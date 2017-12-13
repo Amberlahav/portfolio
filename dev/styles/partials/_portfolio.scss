@@ -33,12 +33,15 @@
         text-align: left;
         }
         h3 {
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             text-align:left;
         }
-        h2 {
+        h2.sectionTitle {
             font-weight: 400;
             margin: 0;
+            font-size:3.2rem;
+        }
+        h2.projectTitle {
             font-size:2.2rem;
         }
         h3::after {
@@ -48,13 +51,11 @@
             margin: 0;
         }
     }
-    h2.sectionTitle {
-        font-size: 2.2rem;
-    }
+
     .line1, .line2 {
         position: relative;
         left:25%;
-        background:url(../../public/images/doted_line.png);
+        background:url(../../public/images/doted_line1.png);
         background-size: contain;
         background-position:center;
         background-repeat:no-repeat;

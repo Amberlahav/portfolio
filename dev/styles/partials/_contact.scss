@@ -1,47 +1,45 @@
 
 .contact {
-    height: 90vh;
+    height: 95vh;
     padding: 50px 0;
     background: url(../../public/images/map.png);
     background-size: cover;
     form {
-        height: 200px;
+        height: 350px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 60%;
         align-content: space-between;
         padding: 20px;
       
-        .contactInfoInputs {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: calc(50% - 20px);
-            margin-right: 20px;
-            
-        }
         input, textarea {
             @extend p;
             text-align: left;
             padding: 10px;
             border:1px solid $sixthColour;
-        }
-        textarea {
-            width: 50%;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius:5px;
         }
         
         label {
             display: none;
         }
     }
-    .submitButton {
-        display: flex;
-        
-        .submit {
-        
-        margin: 20px auto;
+        input.submit {
+        margin: 0 auto;
         width: 150px;
-        
+        height:100px;
+        text-align: center;
+        color:#FFF;
+        &:hover {
+            color:$sixthColour;
         }
+        
+    }
+    h2 {
+        margin: 0;
     }
     .socialIcons {
         width: 20%;

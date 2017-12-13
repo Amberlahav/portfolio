@@ -8,6 +8,9 @@
         color: white;
         padding-top: 50px;
     }
+    h2::after {
+        border-color: #FFF;
+    }
 
     .skills {
  

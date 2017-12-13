@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Poppins:300,400" rel="stylesheet">
 
-
+    <link rel="icon" type="image/png" href="public/images/aLogo.png">
     <link rel="stylesheet" type="text/css" href="public/styles/style.css">
     <title>Amber Lahav</title>
 
@@ -16,7 +16,9 @@
 <body>
     <header id="home">
         <div class="navBar">
-            <div class="logo"></div>
+            <div class="logo">
+                <a href="#home"><img src="public/images/aLogo.png" alt="Amber Lahav Logo"></a>
+            </div>
             <div class="nav-wrap">
                 <nav class="navigation">
                     <div class="hamburger">
@@ -54,15 +56,18 @@
             
         </div>
         <div class="titles wrapper">
-                    <h1 class="typing">Hello, I'm Amber.</h1>
-                    <h2>I'm a web developer based in Toronto.</h2>
-                    <div class="headshot">
-                        <img class="imageColour" src="public/images/headshotColour.jpg" alt="Portrait of Amber Lahav">
-                        <img class="imageBW" src="public/images/headshotBW.jpg" alt="Portrait of Amber Lahav">
+                    <h1 class="typing">Hello! I'm Amber Lahav.</h1>
+                    <!-- <h2>A web developer based in Toronto</h2> -->
+     
+                    <h2>Front-end developer, endlessly <span class="typer"></span> new things.</h2>
+                    <!-- <h2>I'm a web developer based in Toronto.</h2> -->
+                    
+                        <!-- <img class="imageColour" src="public/images/headshotColour.jpg" alt="Portrait of Amber Lahav"> -->
+                        <!-- <img class="imageBW" src="public/images/headshotBW.jpg" alt="Portrait of Amber Lahav"> -->
                         <a href="#about"><i class="down fa fa-angle-down" aria-hidden="true"></i></a>
                         <!-- <i class="up fa fa-chevron-up" aria-hidden="true"></i> -->
                     
-            </div>
+         
 
         </div>
     </header>
@@ -70,42 +75,37 @@
 
         <section class="about" id="about">
             <div class="wrapper">
-               
+                <!-- <h2>About Me</h2> -->
                 <div class="aboutDescription">
-                    <h2>About Me</h2>
-                    <p>Welcome! My name is Amber and I'm a web developer with a passion for being creative and solving challenges. I recently graduated from HackerYou's immersive web development program, where I gained valuable skills in front-end development, as well as the ability to push myself and learn new things quickly. Before that, I graduated from Ryerson University's Graphic Communications Management program with a minor in e-Commerce. I strive to develop and design products with user experience, clean code and accessibility standards in mind.</p>
-
+                <div class="imageIcons">
+                    <div class="headshot draw meet link">
+                        <img class="imageColour" src="public/images/headshotColour.jpg" alt="Portrait of Amber Lahav">
+                        <div class="socialIcons">
+                            <a target="_blank" href="https://twitter.com/Ambercodes_">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/amber-lahav/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/Amberlahav">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        </div>
+                        <p class="myEmail">amber@amberlahav.com</p>
+                    </div>
+                    
                 </div>
-                <h3>I am constantly</h3>
-                <div class="draw meet aboutIcons">
-                   
-                    <div class="developing">
-                        <div class="iconHolder">
-                            <img class="mockupImage" src="public/images/developing.png" alt="">
-                        </div>
-                        <h3>Developing</h3>
-                    </div>
-                    <div class="designing">
-                        <div class="iconHolder">
-                            <img src="public/images/designing.png" alt="">
-                        </div>
-                        <h3>Designing</h3>
-                    </div>
-                    <div class="discovering">
-                        <div class="iconHolder">
-                            <img src="public/images/learning.png" alt="">
-                        </div>
-                        <h3>Discovering</h3>
-                    </div>
-                    
-                    
-                     <!-- coding by Mello from the Noun Project
-                     Computer Learning by Prithvi from the Noun Project
-                     Art by UNiCORN from the Noun Project -->
-                <!-- </div> -->
-                <!-- <p>New things.</p> -->
+                <div class="welcomeText">
+                    <h2>About Me</h2>
+                    <p>My name is Amber and I'm a web developer based in Toronto. I recently graduated
+                    from HackerYou's immersive web development program, where I gained valuable skills in front-end development, as well
+                    as the ability to push myself and learn new things quickly. Before that, I graduated from Ryerson University's Graphic
+                    Communications Management program with a minor in e-Commerce. </p><p>I love to be creative and solve challenges. I strive to develop and design products with user experience,
+                    clean code and accessibility standards in mind. Besides coding and designing, I am really into photography, baking, and travelling to new places.  </p></div>
+                </div>
+              
             </div>
-            <h3>New things.</h3>
+            
         </section>
 
         <section class="mySkills" id="skills">
@@ -165,9 +165,9 @@
                 <div class="project">
                     <div class="projectDescription projectDescription1">
                         <div class="projectText">
-                            <h2>The Snack Hack</h2>
+                            <h2 class="projectTitle">The Snack Hack</h2>
                             <h3>JavaScript / jQuery / API / HTML5 / SASS </h3>
-                            <p>This app uses an Ajax request from an API to generate a list of snacks that a user can and cannot have based on their food allergy or restriction.
+                            <p>A web app that uses an Ajax request from an API to generate a list of snacks that a user can and cannot have based on their food allergy or restriction.
                             </p>
                             <div class="buttons">
                                 <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/the_snack_hack">View Live</a>
@@ -197,9 +197,9 @@
             </div>
             <div class="projectDescription projectDescription2">
                 <div class="projectText">
-                    <h2>Plant Parenthood</h2>
+                    <h2 class="projectTitle">Plant Parenthood</h2>
                     <h3>React / Firebase / JavaScript / HTML5 / SASS </h3>
-                    <p>This app lets users grow their own virtual plant. The user must water their plant once every 24 hours to keep their plant alive and growing. The app tracks the time of when they last watered it, and updates their plant's status.
+                    <p>A web app that lets users grow their own virtual plant. The app tracks the time of when they last watered it via a database, and updates their plant's status.
                     </p>
                     <div class="buttons">
                         <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/plant_parenthood">View Live</a>
@@ -222,9 +222,9 @@
             <div class="project">
                 <div class="projectDescription projectDescription3">
                     <div class="projectText">
-                        <h2>Date Night Outfit Generator</h2>
+                        <h2 class="projectTitle">Date Night Outfit Generator</h2>
                         <h3>JavaScript / jQuery / HTML5 / SASS </h3>
-                        <p>This is an app to help those who are indecisive about what to wear to a date. Users answer a few questions about their date night and get an outfit picked out for them based on their selected answers.
+                        <p>A web app that generates outfit suggestions for people who are indecisive about what to wear to a date. 
                         </p>
                         <div class="buttons">
                             <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/date_night_outfit_generator">View Live</a>
@@ -255,9 +255,9 @@
                 </div>
                 <div class="projectDescription projectDescription4">
                     <div class="projectText">
-                        <h2>Single Page Responsive Website</h2>
+                        <h2 class="projectTitle">Single Page Responsive Website</h2>
                         <h3>HTML5 / SASS </h3>
-                        <p>A fully responsive website converted from a PSD template image, following best practices to fit the layout and functionality of every possible device a user may be viewing it on.
+                        <p>A pixel-perfect, fully responsive website converted from a PSD template image.
                         </p>
                         <div class="buttons">
                             <a target="_blank" class="link buttonLive draw meet" href="http://amberlahav.com/trada">View Live</a>
@@ -274,22 +274,12 @@
             <div class="wrapper">
                 <h2>Contact Me</h2>
                 <h3>Interested in working together? Let's get in touch!</h3>
-                <p>Feel free to send me a message here, or emailing me at amber@amberlahav.com.</p>
+                <p>Feel free to send me a message here, or email me at <span class="myEmail">amber@amberlahav.com.</span></p>
                 <form action="https://formspree.io/amber@amberlahav.com" method="POST">
                     <div class="contactInfoInputs">
                         <input type="name" name="name" placeholder="Name *" id="name" class="name">
-        
-                        <label for="name" class="visually-hidden">Name
-                            <span>*</span>
-                        </label>
-        
                         <input type="email" name="email" placeholder="Email *" id="email" class="email">
                         <label for="email" class="visually-hidden">Email
-                            <span>*</span>
-                        </label>
-        
-                        <input type="subject" name="subject" placeholder="Subject *" id="subject" class="subject">
-                        <label for="subject" class="visually-hidden">Subject
                             <span>*</span>
                         </label>
                     </div>
@@ -297,12 +287,11 @@
                     <label for="Message" class="visually-hidden">Message
                         <span>*</span>
                     </label>
-        
+                    <input type="submit" name="submit" value="Send" class="submit submitButton draw meet" />
+                   
                 </form>
-                <div class="submitButton draw meet">
-                    <input type="submit" name="submit" value="Send" class="submit" />
-                </div>
-                <div class="socialIcons">
+               
+                <!-- <div class="socialIcons">
                     <a target="_blank" href="https://twitter.com/AmberLahav">
                         <i class="fa fa-twitter"></i>
                     </a>
@@ -312,18 +301,19 @@
                     <a target="_blank" href="https://github.com/Amberlahav">
                         <i class="fa fa-github-alt"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
     <footer>
         <div class="wrapper">
-        <p class="copyright">Copyright ©2016 Designed by
+        <p class="copyright">Design based on theme by
                 Moninul Ahsan. Developed by Amber Lahav.</p>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="public/scripts/jquery.smooth-scroll.js"></script>
+    <script src="public/scripts/type.js"></script>
     <script src="public/scripts/main.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script> -->
     <!-- <script src="js/scrollmagic/minified/ScrollMagic.min.js"></script> -->
