@@ -1,6 +1,6 @@
 
 .contact {
-    height: 95vh;
+    height: 100vh;
     padding: 50px 0;
     background: url(../../public/images/map.png);
     background-size: cover;
@@ -57,22 +57,30 @@
 
     // media queries:
     @media (max-width:940px) {
-        height: 100vh;
-        padding:25px 0;
+        height: 110vh;
+        padding:55px 0;
         .submit {
             padding:10px;
             margin: 15px auto;
         }
     }
+    @media (max-width:768px) {
+        height: 70vh;
+        form {
+            width: 70%;
+        }
+    }
 
     @media (max-width:480px) {
-        height: 150vh;
+        height: 120vh;
        h3 {
            font-size:1.6rem;
        }
        form {
            flex-direction: column;
            height: 80vh;
+           width: 80%;
+           padding: 0;
        }
        .socialIcons {
            width: 50%;
@@ -82,10 +90,13 @@
            width: 100%;
            margin:10px;
        }
+       input.submit {
+           height: 60px;
+       }
     }
 
     @media (max-width:375px) {
-        height: 130vh;
+        height: 115vh;
         form {
             height: 70vh;
         }

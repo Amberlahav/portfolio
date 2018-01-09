@@ -127,7 +127,7 @@
         //     font-size: 1.8rem;
         // }
         p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
         .imageIcons {
             width: 45%;
@@ -160,10 +160,10 @@
     }
 
     @media (max-width:480px) {
-       height: 150vh;
+       height: 160vh;
         padding: 60px 18px;
         .wrapper {
-            padding: 0px 45px;
+            padding: 0px 25px;
         }
         h3 {
             font-size: 1.2rem;
@@ -180,13 +180,12 @@
     }
      @media (max-width:400px) {
         padding: 50px 8px;
-        height: 160vh;
         .imageIcons {
             width: 85%;
         }
     }
     @media (max-width:375px) {
-        height: 180vh;
+        height: 165vh;
         .aboutIcons {
             width: 100%;
         }

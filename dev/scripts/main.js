@@ -19,7 +19,7 @@ portfolio.init = function () {
         cursorChar: ""
     });
     
-    AOS.init();
+    // AOS.init();
 
     function hasTouch() {
         return 'ontouchstart' in document.documentElement

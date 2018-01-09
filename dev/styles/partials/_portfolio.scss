@@ -37,7 +37,7 @@
         }
         
         h2.projectTitle {
-            font-size:2.6rem;
+            font-size:2.4rem;
             margin-top:0;
         }
         h3::after {
@@ -167,7 +167,8 @@
             width: 100%;
         }
         .projectDescription {
-            top:25%;
+            top:28%;
+            padding: 25px;
         }
         .imageContainer {
             width: 70%;
@@ -176,12 +177,22 @@
             right: 0;
             top: 40%;
         }
+
     }
 
-    @media (max-width:400px) {
+    @media (max-width:420px) {
         .imageContainer {
-            width: 80%;
-            top:50%;
+            width: 100%;
+            top:48%;
+        }
+         h3 {
+
+            text-align: center;
+        }
+        p {
+            font-size:1.5rem;
+            text-align: center;
+
         }
     }
     
