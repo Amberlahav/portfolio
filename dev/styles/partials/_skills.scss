@@ -71,38 +71,59 @@
     @media (max-width:830px) {
         height: 110vh;
         .skills {
-            width: 90%;
+            width: 95%;
         }
         .devicon {
             font-size:6.4rem
         }
     }
     @media (max-width:768px) {
-        height: 80vh;
+        height: 90vh;
          .devicon {
             font-size:6rem
         }
     }
-    @media (max-width:740px) {
-        .skills {
-            width: 85%;
-        }
-        .devicon {
-            font-size:6.8rem
-        }
-    }
-    @media (max-width:615px) {
-        height: 130vh;
+    @media (max-width:742px) {
+        height: 95vh;
         .skills {
             width: 95%;
         }
         .devicon {
-            font-size:7rem
+            font-size:6.2rem
+        }
+    }
+    @media (max-width:730px) {
+        .devicon {
+            font-size:5.8rem
+        }
+    }
+
+    @media (max-width:718px) {
+        .skills {
+            width: 100%;
+        }
+        .devicon {
+            font-size:5.8rem
+        }
+    }
+    @media (max-width:685px) {
+        height: 100vh;
+        .devicon {
+            font-size:5.2rem
+        }
+    }
+    @media (max-width:615px) {
+        height: 110vh;
+        .skills {
+            width: 85%;
+        }
+        .devicon {
+            font-size:5rem
         }
     }
     @media (max-width:600px) {
         .skills {
-            width: 80%;
+            width: 90%;
         }
         .devicon {
             font-size:6rem
@@ -113,14 +134,33 @@
             width: 90%;
         }
     }
-    @media (max-width:510px) {
-        .skills {
-            width: 95%;
+    @media (max-width:555px) {
+        .devicon {
+            font-size:5.4rem
+        }
+
+    }
+    @media (max-width:535px) {
+        .devicon {
+            font-size:5rem
         }
     }
-    @media (max-width:490px) {
+    @media (max-width:535px) {
+        .devicon {
+            font-size:5rem
+        }
         .skills {
             width: 100%;
+        }
+    }
+    
+    @media (max-width:450px) {
+        height: 115vh;
+        .skills {
+            width: 90%;
+        }
+        .devicon {
+            font-size:4rem
         }
     }
     @media (max-width:440px) {
@@ -143,7 +183,7 @@
        
     }
     @media (max-width:375px) {
-        height: 100vh;
+        height: 95vh;
         .devicon {
             font-size:4rem;
             margin: 5px;
@@ -156,20 +196,31 @@
         }
     }
     @media (max-width:355px) {
+        height: 100vh;
         .devicon {
             font-size:3.8rem;
-            margin: 2px;
+ 
         }
         .skills {
-            width: 80%;
+            width: 100%;
         }
     }
     @media (max-width:328px) {
         .devicon {
             font-size:3.6rem;
         }
+        
+    }
+    @media (max-width:300px) {
+        height: 110vh;
         .skills {
-            width: 87%;
+            width: 95%;
         }
+        .devicon {
+            font-size:2.8rem;
+        }
+    }
+    @media (max-width:285px) {
+        height: 115vh;
     }
 }
